@@ -3,7 +3,9 @@ Image generation based on given text descriptions has always been a hot topic in
 ![Image text](https://github.com/HeAinorrt/BERT-AttnGAN-hes/blob/main/imgfile/netstructure.jpg)
 ## Dependencies
 python 3.6.8
+
 pytorch
+
 In addition, please add the project folder to PYTHONPATH and pip install the following packages:
 * nltk
 * scikit-image
