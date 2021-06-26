@@ -1,0 +1,31 @@
+CONFIG_NAME: 'DAMSM'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '../data/birds/'
+GPU_ID: 0
+WORKERS: 16
+
+
+TREE:
+    BRANCH_NUM: 3
+    BASE_SIZE: 64
+
+
+TRAIN:
+    FLAG: True
+    NET_E: '../DAMSMencoders/bird/text_encoder6.pth' # '../DAMSMencoders/bird/text_encoder11.pth'  #'../DAMSMencoders/bird/text_encoder200.pth'
+    BATCH_SIZE: 96
+    MAX_EPOCH: 201
+    SNAPSHOT_INTERVAL: 1
+    ENCODER_LR: 0.00018  # 0.0002best; 0.002good; scott: 0.0007 with 0.98decay
+    RNN_GRAD_CLIP: 0.25
+    SMOOTH:
+        GAMMA1: 4.0  # 1,2,5 good 4 best  10&100bad
+        GAMMA2: 5.0
+        GAMMA3: 10.0  # 10good 1&100bad
+
+
+
+TEXT:
+    EMBEDDING_DIM: 768 # 256
+    CAPTIONS_PER_IMAGE: 1

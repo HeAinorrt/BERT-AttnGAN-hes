@@ -1,0 +1,30 @@
+CONFIG_NAME: 'attn2'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '../data/birds'
+GPU_ID: 0
+WORKERS: 1
+
+B_VALIDATION: False  # True  # False
+TREE:
+    BRANCH_NUM: 3
+
+
+TRAIN:
+    FLAG: False
+    NET_G: '../models/netG_epoch_632.pth'  # ../models/bird_AttnGAN2.pth
+    B_NET_D: False
+    BATCH_SIZE: 20
+    NET_E: '../DAMSMencoders/bird/text_encoder12.pth'  # 200
+
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 150
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 768
+    CAPTIONS_PER_IMAGE: 1
+    WORDS_NUM: 18
